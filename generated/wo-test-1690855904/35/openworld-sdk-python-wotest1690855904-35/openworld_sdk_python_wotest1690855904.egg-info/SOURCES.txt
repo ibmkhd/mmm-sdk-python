@@ -1,0 +1,10 @@
+setup.py
+openworld/sdk/wotest1690855904/client/default_client.py
+openworld/sdk/wotest1690855904/client/security_client.py
+openworld/sdk/wotest1690855904/model/network_policies.py
+openworld/sdk/wotest1690855904/model/rules.py
+openworld_sdk_python_wotest1690855904.egg-info/PKG-INFO
+openworld_sdk_python_wotest1690855904.egg-info/SOURCES.txt
+openworld_sdk_python_wotest1690855904.egg-info/dependency_links.txt
+openworld_sdk_python_wotest1690855904.egg-info/requires.txt
+openworld_sdk_python_wotest1690855904.egg-info/top_level.txt
