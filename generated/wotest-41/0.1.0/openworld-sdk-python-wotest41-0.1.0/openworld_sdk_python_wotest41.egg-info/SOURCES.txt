@@ -1,0 +1,10 @@
+setup.py
+openworld/sdk/wotest41/client/default_client.py
+openworld/sdk/wotest41/client/security_client.py
+openworld/sdk/wotest41/model/network_policies.py
+openworld/sdk/wotest41/model/rules.py
+openworld_sdk_python_wotest41.egg-info/PKG-INFO
+openworld_sdk_python_wotest41.egg-info/SOURCES.txt
+openworld_sdk_python_wotest41.egg-info/dependency_links.txt
+openworld_sdk_python_wotest41.egg-info/requires.txt
+openworld_sdk_python_wotest41.egg-info/top_level.txt
