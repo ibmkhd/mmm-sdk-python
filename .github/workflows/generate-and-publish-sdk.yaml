@@ -30,7 +30,7 @@ jobs:
     uses: ./.github/workflows/publish-sdk.yaml
     secrets: inherit
   id:
-    needs: [ publish_sdk ]
+    needs: [ commit_sdk, publish_sdk ]
     name: Workflow ID Provider
     runs-on: ubuntu-latest
     steps:
