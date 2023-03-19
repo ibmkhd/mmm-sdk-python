@@ -2,6 +2,9 @@ name: Generate and Publish SDK
 on:
   workflow_dispatch:
     inputs:
+      id:
+        description: 'run identifier'
+        required: false
       version:
         description: 'generated sdk version'
         required: true
@@ -26,3 +29,10 @@ jobs:
     needs: [ generate_sdk ]
     uses: ./.github/workflows/publish-sdk.yaml
     secrets: inherit
+  id:
+    name: Workflow ID Provider
+    runs-on: ubuntu-latest
+    steps:
+      - name: ${{github.event.inputs.id}}
+        run: echo run identifier ${{ inputs.id }}  
+  
