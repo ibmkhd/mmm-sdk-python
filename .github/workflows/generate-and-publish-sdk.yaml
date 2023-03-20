@@ -16,15 +16,8 @@ on:
         description: 'generated sdk file as base64 encoded'
         required: true
 jobs:
-  id:
-    name: ${{github.event.inputs.id}}
-    runs-on: ubuntu-latest
-    steps:
-      - name: ${{github.event.inputs.id}}
-        run: echo run identifier ${{ inputs.id }}
   generate_sdk:
     uses: ./.github/workflows/generate-sdk.yaml
-    needs: [ id ]
     with:
       version: ${{ github.event.inputs.version }}
       name: ${{ github.event.inputs.name }}
@@ -35,5 +28,9 @@ jobs:
   publish_sdk:
     needs: [ generate_sdk ]
     uses: ./.github/workflows/publish-sdk.yaml
-    secrets: inherit 
+    secrets: inherit
+  create_release:
+    needs: [ commit_sdk, publish_sdk]
+    uses: ./.github/workflows/create_release.yaml
+    secrets: inherit     
   
