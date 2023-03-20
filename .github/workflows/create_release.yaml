@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: get_key
+        run: |
+          go install resenje.org/casbab/cmd/casbab@latest
+          key=$(`go env GOPATH`/bin/casbab kebab '${{github.event.inputs.name}}')      
       - uses: softprops/action-gh-release@v1
         with:
           tag_name: $key/${{github.event.inputs.version}}
