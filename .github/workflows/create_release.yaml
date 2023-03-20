@@ -12,6 +12,6 @@ jobs:
           key=$(`go env GOPATH`/bin/casbab kebab '${{github.event.inputs.name}}')      
       - uses: softprops/action-gh-release@v1
         with:
-          tag_name: $key/${{github.event.inputs.version}}
+          tag_name: "$key/${{github.event.inputs.version}}"
         env:
           GH_TOKEN: ${{ github.token }}
